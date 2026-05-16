@@ -1,0 +1,125 @@
+.section { padding: 5rem 0; }
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.list { display: flex; flex-direction: column; gap: 2px; }
+
+.item {
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  overflow: hidden;
+  position: relative;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--a), var(--a2));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.35s ease;
+}
+
+.item[data-open="true"] {
+  border-color: var(--border2);
+  background: var(--bg3);
+}
+
+.item[data-open="true"]::before { transform: scaleY(1); }
+
+.header {
+  width: 100%;
+  padding: 1.4rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 1rem;
+  text-align: left;
+}
+
+.headerLeft { display: flex; flex-direction: column; gap: 3px; }
+
+.role {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.company {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--a);
+  letter-spacing: 0.05em;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  padding: 3px 9px;
+  border: 1px solid var(--a3);
+  color: var(--a3);
+  letter-spacing: 0.08em;
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.chevron {
+  font-size: 18px;
+  color: var(--muted2);
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.chevron[data-open="true"] { transform: rotate(90deg); }
+
+.body { overflow: hidden; }
+
+.bullets {
+  list-style: none;
+  padding: 0 1.75rem 1.4rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bullets li {
+  font-size: 13.5px;
+  color: var(--muted2);
+  line-height: 1.65;
+  padding-left: 1.2rem;
+  position: relative;
+  font-weight: 300;
+}
+
+.bullets li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--a);
+  font-size: 11px;
+  top: 4px;
+}

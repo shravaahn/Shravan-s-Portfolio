@@ -1,0 +1,21 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.4rem 2.5rem;
+  background: var(--bg);
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left, .right {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

@@ -1,0 +1,16 @@
+.wrap { margin-bottom: 2.5rem; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--a);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.sub {
+  color: var(--muted2);
+  font-size: 0.88rem;
+  font-weight: 300;
+}
