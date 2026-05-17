@@ -89,8 +89,8 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.85, ease: [0.22, 1, 0.36, 1] }}
       >
         {[
-          { val: '2+', label: 'Years experience' },
-          { val: '2', label: 'Workday Pro certs' },
+          { val: '1+', label: 'Years experience' },
+          { val: '2', label: 'Workday Pro certifications' },
           { val: '4+', label: 'Live projects' },
           { val: '3', label: 'Enterprise platforms' },
         ].map(s => (
